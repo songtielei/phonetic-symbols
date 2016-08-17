@@ -7,7 +7,7 @@ $(function () {
     url = localStorage.getItem(src);
     source.src = url;
     source.play();
-    $('.modal').fadeIn();
+    $('.modal').modal();
   };
   $('dl dd').on('click', 'a', function () {
     showVideo($(this).attr('href'));
