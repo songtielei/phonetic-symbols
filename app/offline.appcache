@@ -1,0 +1,12 @@
+CACHE MANIFEST
+# v1 2016-10-07
+# This is another comment
+styles/main.css
+scripts/vendor/modernizr.js
+scripts/vendor.js
+scripts/main.js
+scripts/plugins.js
+favicon.ico
+
+NETWORK:
+*
