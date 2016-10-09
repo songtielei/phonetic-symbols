@@ -80,7 +80,7 @@ $(function () {
   //with no dependencies, it should be fine to use this instead of ondomcontentloaded
   var a = document.createElement('audio');
   if (!a.canPlayType) {
-    $("support").append('Your browser does not support HTML5 Audio<br>');
+    $("#support").append('Your browser does not support HTML5 Audio<br>');
   }
   if (!(a.canPlayType && a.canPlayType('audio/ogg; codecs="vorbis"').replace(/no/, ''))) {
     $("#support").append('Your browser does not support Ogg Vorbis Playback<br>');
@@ -93,10 +93,10 @@ $(function () {
   var f = document.createElement('input');
   f.type = 'file';
   if (!('multiple' in f)) {
-    $("support").append('Your browser does not support selecting multiple files<br>');
+    $("#support").append('Your browser does not support selecting multiple files<br>');
   }
   if (!('webkitdirectory' in f)) {
-    $("support").append('Your browser probably does not support selecting directories<br>');
+    $("#support").append('Your browser probably does not support selecting directories<br>');
   }
   if (window.createObjectURL) {
   } else if (window.createBlobURL) {
