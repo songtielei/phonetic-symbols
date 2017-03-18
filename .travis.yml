@@ -9,16 +9,13 @@ sudo: false
 node_js:
 - '6.10'
 
-before_install:
-- openssl aes-256-cbc -K $encrypted_26b4962af0e7_key -iv $encrypted_26b4962af0e7_iv
-  -in .travis/id_rsa_evatlsong.enc -out ~/.ssh/id_rsa_evatlsong -d
-- chmod 600 ~/.ssh/id_rsa_evatlsong
-- eval $(ssh-agent)
-- ssh-add ~/.ssh/id_rsa_evatlsong
-- cp .travis/ssh_config ~/.ssh/config
-- git config --global user.name "evatlsong"
-- git config --global user.email evatlsong@gmail.com
-- git clone -b master git@github.com:evatlsong/phonetic-symbols.git dist
+deploy:
+  local_dir: dist
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
+  on:
+    branch: master
 
 install:
 - npm install
@@ -26,7 +23,3 @@ install:
 
 script:
 - gulp build
-- cd dist
-- git add .
-- git commit -m 'change'
-- git push origin gh-pages:gh-pages
