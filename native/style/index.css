@@ -1,0 +1,23 @@
+.container {
+    max-∞5%width: 524px;
+    margin-left: auto;
+    margin-right: auto;
+}
+dd {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin: 10px 10px 0px 0px;
+    border: 1px solid #2feae1;
+    -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+            border-radius: 5px;
+}
+dd a {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    height: 48px;
+    color: black;
+    font-size: 2em;
+}
