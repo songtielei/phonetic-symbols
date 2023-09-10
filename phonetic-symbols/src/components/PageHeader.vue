@@ -42,7 +42,7 @@ function invokeInput() {
 
   const e = document.createEvent("MouseEvents");
   e.initEvent("click", true, true);
-  input.dispatchEvent(e);
+  input?.dispatchEvent(e);
 
 
   //   const event = new MouseEvent("change");

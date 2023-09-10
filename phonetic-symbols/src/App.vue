@@ -89,7 +89,7 @@ function showVideo(event: any) {
   const video = <HTMLMediaElement>document.querySelector('video');
   const url = localStorage.getItem(event.target.href.replace(window.location.href, ''));
 
-  if (video && video.src !== url) {
+  if (video && url && video.src !== url) {
     video.src = url;
     video?.play();
   }

@@ -12,7 +12,7 @@ import 'element-plus/dist/index.css'
 
 const app = createApp(App)
 for (const name in ElIcons) {
-  app.component(name, ElIcons[name]);
+  //app.component(name, ElIcons[name]);
 }
 app.use(ElementPlus)
 app.use(createPinia())
