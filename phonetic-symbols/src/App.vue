@@ -131,7 +131,7 @@ dd {
   width: 50px;
   height: 50px;
   margin: 0px 10px 0px 0px;
-  border: solid;
+  border: solid 1px;
   border-radius: 5px;
 }
 
@@ -140,6 +140,10 @@ dd a {
   text-align: center;
   height: 48px;
   font-size: 2em;
+  text-decoration: none;
+  font-family: Helvetica, sans-serif;
+  padding: 5px 0;
+  color: black;
 }
 
 .videoMenu {
